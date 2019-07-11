@@ -1,57 +1,34 @@
-# Project Name
+# Example "Hello, world" Spring Boot application that runs on Azure Functions
 
-(short, 1-3 sentenced, description of the project)
+This is a sample applicaiton to showcase the use of Spring Cloud Function on top of Azure Functions.
 
 ## Features
 
-This project framework provides the following features:
-
-* Feature 1
-* Feature 2
-* ...
+This is just a "Hello, world", but it uses domain objects so it's easy to extend to do something more complex.
 
 ## Getting Started
 
 ### Prerequisites
 
-(ideally very short, if any)
-
-- OS
-- Library version
-- ...
+This project uses the Maven Wrapper, so all you need is Java installed.
 
 ### Installation
 
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
+- Clone the project: `git clone https://github.com/Azure-Samples/hello-spring-function-azure.git`
+- Build the project: `./mvnw clean package`
 
 ### Quickstart
-(Add steps to get up and running quickly)
 
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
+Once the application is built, you can run it locally using the Azure Function Maven plug-in:
 
+`./mvnw azure-functions:run`
 
-## Demo
+And you can test it using a cURL command:
 
-A demo app is included to show how to use the project.
+`curl http://localhost:7071/api/hello -d "{\"name\":\"Azure\"}"`
 
-To run the demo, follow these steps:
+## Deploying to Azure Function
 
-(Add steps to start up the demo)
+Deploying the application on Azure Function with the Azure Function Maven plug-in:
 
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+`./mvnw azure-functions:deploy`
