@@ -1,3 +1,13 @@
+---
+page_type: sample
+languages:
+- java
+products:
+- azure
+description: "This is a sample applicaiton to showcase the use of Spring Cloud Function on top of Azure Functions."
+urlFragment: hello-spring-function-azure
+---
+
 # Example "Hello, world" Spring Boot application that runs on Azure Functions
 
 This is a sample applicaiton to showcase the use of Spring Cloud Function on top of Azure Functions.
