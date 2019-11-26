@@ -110,6 +110,10 @@
                             <name>FUNCTIONS_WORKER_RUNTIME</name>
                             <value>java</value>
                         </property>
+                        <property>
+                            <name>MAIN_CLASS</name>
+                            <value>com.example.HelloFunction</value>
+                        </property>
                     </appSettings>
                 </configuration>
                 <executions>
