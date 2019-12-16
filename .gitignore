@@ -30,6 +30,6 @@ hs_err_pid*
 .DS_Store
 
 # Azure Functions
-local.settings.json
+# local.settings.json
 bin/
 obj/
