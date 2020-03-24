@@ -12,6 +12,8 @@ urlFragment: hello-spring-function-azure
 
 This is a sample application to showcase the use of Spring Cloud Function on top of Azure Functions.
 
+## Build tool
+
 This branch uses __Gradle__ to build the application, please use the `master` branch to use __Maven__ instead:
 
 [Switch to the `master` branch](../../tree/master/)
