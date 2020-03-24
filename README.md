@@ -17,7 +17,7 @@ This is a sample application to showcase the use of Spring Cloud Function on top
 This branch uses __Gradle__ to build the application:
  
 - It uses the Azure Functions Plugin for Gradle, documented at [https://github.com/microsoft/azure-gradle-plugins/tree/master/azure-functions-gradle-plugin](https://github.com/microsoft/azure-gradle-plugins/tree/master/azure-functions-gradle-plugin)
-- Use the `master` branch to use __Maven__ instead: [Switch to the `master` branch](../../tree/master/)
+- If you want to use __Maven__ instead, please [Switch to the `master` branch](../../tree/master/)
 
 ## Features
 
