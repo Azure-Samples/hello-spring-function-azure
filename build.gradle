@@ -37,6 +37,12 @@ tasks.withType(JavaCompile) {
 azurefunctions {
     resourceGroup = 'spring-functions'
     appName = 'judubois-fun-web'
+    appSettings {
+        WEBSITE_RUN_FROM_PACKAGE = 1
+        FUNCTIONS_EXTENSION_VERSION = ~2
+        FUNCTIONS_WORKER_RUNTIME = java
+        MAIN_CLASS = com.example.HelloFunction
+    }
     authentication {
         type = 'azure_cli'
     }
