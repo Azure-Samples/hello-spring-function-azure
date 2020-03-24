@@ -44,7 +44,7 @@ And you can test it using a cURL command:
 
 `curl http://localhost:7071/api/hello -d "{\"name\":\"Azure\"}"`
 
-## Deploying to Azure Function
+## Deploying to Azure Functions
 
 Deploy the application on Azure Functions with the Azure Function Gradle plug-in:
 
