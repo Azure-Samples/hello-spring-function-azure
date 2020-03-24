@@ -18,6 +18,11 @@ This branch uses __Maven__ to build the application, please use the `gradle` bra
 
 [Switch to the `gradle` branch](../../tree/gradle/)
 
+This branch uses __Maven__ to build the application:
+ 
+- It uses the Azure Functions Plugin for Maven, documented at [https://github.com/microsoft/azure-maven-plugins/tree/develop/azure-functions-maven-plugin](https://github.com/microsoft/azure-maven-plugins/tree/develop/azure-functions-maven-plugin)
+- Use the `gradle` branch to use __Gradle__ instead: [Switch to the `gradle` branch](../../tree/gradle/)
+
 ## Features
 
 This is just a "Hello, world", but it uses domain objects so it's easy to extend to do something more complex.
@@ -43,8 +48,8 @@ And you can test it using a cURL command:
 
 `curl http://localhost:7071/api/hello -d "{\"name\":\"Azure\"}"`
 
-## Deploying to Azure Function
+## Deploying to Azure Functions
 
-Deploying the application on Azure Function with the Azure Function Maven plug-in:
+Deploy the application on Azure Functions with the Azure Function Maven plug-in:
 
 `./mvnw azure-functions:deploy`
