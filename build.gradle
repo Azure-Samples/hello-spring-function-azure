@@ -30,6 +30,11 @@ dependencies {
     compileOnly 'org.springframework.cloud:spring-cloud-starter-function-web:3.0.3.RELEASE'
 }
 
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+description = 'Hello Spring Function on Azure'
+sourceCompatibility = '1.8'
+
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
