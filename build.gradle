@@ -5,6 +5,7 @@
 plugins {
     id 'java'
     id 'maven-publish'
+    id "com.microsoft.azure.azurefunctions" version "1.0.0"
 }
 
 repositories {
@@ -48,4 +49,17 @@ publishing {
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
+}
+
+azurefunctions {
+    resourceGroup = 'spring-functions'
+    appName = 'judubois-fun-web'
+    authentication {
+        type = 'azure_cli'
+    }
+    // enable local debug
+    // localDebug = "transport=dt_socket,server=y,suspend=n,address=5005"
+    deployment {
+        type = 'run_from_blob'
+    }
 }
