@@ -4,7 +4,7 @@ languages:
 - java
 products:
 - azure
-description: "This is a sample applicaiton to showcase the use of Spring Cloud Function on top of Azure Functions."
+description: "This is a sample application to showcase the use of Spring Cloud Function on top of Azure Functions."
 urlFragment: hello-spring-function-azure
 ---
 
