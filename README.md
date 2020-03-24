@@ -14,9 +14,10 @@ This is a sample application to showcase the use of Spring Cloud Function on top
 
 ## Build tool
 
-This branch uses __Gradle__ to build the application, please use the `master` branch to use __Maven__ instead:
-
-[Switch to the `master` branch](../../tree/master/)
+This branch uses __Gradle__ to build the application:
+ 
+- It uses the Azure Functions Plugin for Gradle, documented at [https://github.com/microsoft/azure-gradle-plugins/tree/master/azure-functions-gradle-plugin](https://github.com/microsoft/azure-gradle-plugins/tree/master/azure-functions-gradle-plugin)
+- Use the `master` branch to use __Maven__ instead: [Switch to the `master` branch](../../tree/master/)
 
 ## Features
 
@@ -26,18 +27,18 @@ This is just a "Hello, world", but it uses domain objects so it's easy to extend
 
 ### Prerequisites
 
-This project uses the Maven Wrapper, so all you need is Java installed.
+This project uses the Gradle Wrapper, so all you need is Java installed.
 
 ### Installation
 
 - Clone the project: `git clone https://github.com/Azure-Samples/hello-spring-function-azure.git`
-- Build the project: `./mvnw clean package`
+- Build the project: `gradle azureFunctionsPackage`
 
 ### Quickstart
 
-Once the application is built, you can run it locally using the Azure Function Maven plug-in:
+Once the application is built, you can run it locally using the Azure Function Gradle plug-in:
 
-`./mvnw azure-functions:run`
+`gradle azureFunctionsRun`
 
 And you can test it using a cURL command:
 
@@ -45,6 +46,6 @@ And you can test it using a cURL command:
 
 ## Deploying to Azure Function
 
-Deploying the application on Azure Function with the Azure Function Maven plug-in:
+Deploy the application on Azure Functions with the Azure Function Gradle plug-in:
 
-`./mvnw azure-functions:deploy`
+`gradle azureFunctionsDeploy`
