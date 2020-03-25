@@ -1,0 +1,66 @@
+
+plugins {
+    id 'java'
+    id "com.microsoft.azure.azurefunctions" version "1.0.0"
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        url = 'https://repo.spring.io/libs-snapshot-local'
+    }
+
+    maven {
+        url = 'https://repo.spring.io/libs-milestone-local'
+    }
+
+    maven {
+        url = 'https://repo.spring.io/release'
+    }
+
+    maven {
+        url = 'https://repo.maven.apache.org/maven2'
+    }
+    jcenter()
+}
+
+dependencies {
+    implementation 'org.springframework.cloud:spring-cloud-function-adapter-azure:3.0.3.RELEASE'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.2.5.RELEASE'
+    compileOnly 'org.springframework.cloud:spring-cloud-starter-function-web:3.0.3.RELEASE'
+}
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+description = 'Hello Spring Function on Azure'
+sourceCompatibility = '1.8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class' : 'com.example.HelloFunction'
+    }
+}
+
+azurefunctions {
+    resourceGroup = 'my-spring-function-resource-group'
+    appName = 'my-spring-function'
+    appSettings {
+        WEBSITE_RUN_FROM_PACKAGE = '1'
+        FUNCTIONS_EXTENSION_VERSION = '~2'
+        FUNCTIONS_WORKER_RUNTIME = 'java'
+        MAIN_CLASS = 'com.example.HelloFunction'
+    }
+    authentication {
+        type = 'azure_cli'
+    }
+    // enable local debug
+    // localDebug = "transport=dt_socket,server=y,suspend=n,address=5005"
+    deployment {
+        type = 'run_from_blob'
+    }
+}
+
