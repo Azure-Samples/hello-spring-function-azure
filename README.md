@@ -32,6 +32,9 @@ This project uses the Gradle Wrapper, so all you need is Java installed.
 ### Installation
 
 - Clone the project: `git clone https://github.com/Azure-Samples/hello-spring-function-azure.git`
+- Configure the project to use your own resource group and your own application name (it should be unique across Azure)
+  - Open the `build.gradle` file
+  - Customize the `resourceGroup` and `appName` properties
 - Build the project: `gradle azureFunctionsPackage`
 
 ### Quickstart
@@ -49,3 +52,9 @@ And you can test it using a cURL command:
 Deploy the application on Azure Functions with the Azure Function Gradle plug-in:
 
 `gradle azureFunctionsDeploy`
+
+You can then test the running application:
+
+`curl https://<YOUR_SPRING_FUNCTION_NAME>.azurewebsites.net/api/hello -d "{\"name\":\"Azure\"}"`
+
+  Replace the `<YOUR_SPRING_FUNCTION_NAME>` part by the name of your Spring Function.
