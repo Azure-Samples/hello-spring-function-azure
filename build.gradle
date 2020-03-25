@@ -46,8 +46,8 @@ jar {
 }
 
 azurefunctions {
-    resourceGroup = 'spring-functions'
-    appName = 'judubois-fun-web'
+    resourceGroup = 'my-spring-function-resource-group'
+    appName = 'my-spring-function'
     appSettings {
         WEBSITE_RUN_FROM_PACKAGE = '1'
         FUNCTIONS_EXTENSION_VERSION = '~2'
