@@ -39,9 +39,10 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-task copyConfigurationFiles(type: Copy) {
-    from "src/main/azure/host.json", "src/main/azure/local.settings.json"
-    into "$buildDir/azure-functions/judubois-fun-web"
+jar {
+    manifest {
+        attributes 'Main-Class' : 'com.example.HelloFunction'
+    }
 }
 
 azurefunctions {
@@ -62,3 +63,4 @@ azurefunctions {
         type = 'run_from_blob'
     }
 }
+
