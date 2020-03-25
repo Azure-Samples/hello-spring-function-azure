@@ -57,4 +57,4 @@ You can then test the running application:
 
 `curl https://<YOUR_SPRING_FUNCTION_NAME>.azurewebsites.net/api/hello -d "{\"name\":\"Azure\"}"`
 
-  Replace the `<YOUR_SPRING_FUNCTION_NAME>` part by the name of your Spring Function.
+Replace the `<YOUR_SPRING_FUNCTION_NAME>` part by the name of your Spring Function.
