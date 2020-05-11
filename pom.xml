@@ -30,7 +30,7 @@
         <functionAppRegion>westus</functionAppRegion>
         <stagingDirectory>${project.build.directory}/azure-functions/${functionAppName}</stagingDirectory>
         <start-class>com.example.HelloFunction</start-class>
-        <spring.boot.wrapper.version>1.0.23.RELEASE</spring.boot.wrapper.version>
+        <spring.boot.wrapper.version>1.0.24.RELEASE</spring.boot.wrapper.version>
     </properties>
 
     <dependencies>
