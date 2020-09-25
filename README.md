@@ -59,6 +59,9 @@ Deploy the application on Azure Functions with the Azure Function Maven plug-in:
 
 You can then test the running application:
 
-`curl https://<YOUR_SPRING_FUNCTION_NAME>.azurewebsites.net/api/hello -d "{\"name\":\"Azure\"}"`
+```
+curl https://<YOUR_SPRING_FUNCTION_NAME>.azurewebsites.net/api/hello -d "{\"name\":\"Azure\"}"
+curl https://<YOUR_SPRING_FUNCTION_NAME>.azurewebsites.net/api/hello?name=Azure
+```
 
 Replace the `<YOUR_SPRING_FUNCTION_NAME>` part by the name of your Spring Function.
