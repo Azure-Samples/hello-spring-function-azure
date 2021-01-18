@@ -2,7 +2,7 @@ package com.example;
 
 import com.example.model.Greeting;
 import com.example.model.User;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.cloud.function.adapter.azure.AzureSpringBootRequestHandler;
 
 import static org.assertj.core.api.Assertions.assertThat;
