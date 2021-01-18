@@ -26,8 +26,8 @@
         <azure.functions.maven.plugin.version>1.9.0</azure.functions.maven.plugin.version>
 
         <!-- customize those two properties. The functionAppName should be unique across Azure -->
-        <functionResourceGroup>spring-functions</functionResourceGroup>
-        <functionAppName>judubois-fun-web</functionAppName>
+        <functionResourceGroup>my-spring-function-resource-group</functionResourceGroup>
+        <functionAppName>my-spring-function</functionAppName>
 
         <functionAppRegion>westeurope</functionAppRegion>
         <stagingDirectory>${project.build.directory}/azure-functions/${functionAppName}</stagingDirectory>
