@@ -111,6 +111,10 @@
                     <resourceGroup>${functionResourceGroup}</resourceGroup>
                     <appName>${functionAppName}</appName>
                     <region>${functionAppRegion}</region>
+                    <runtime>
+                        <os>linux</os>
+                        <javaVersion>11</javaVersion>
+                    </runtime>
                     <appSettings>
                         <!-- Run Azure Function from package file by default -->
                         <property>
