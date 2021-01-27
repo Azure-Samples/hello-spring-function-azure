@@ -20,8 +20,7 @@ public class HelloHandler extends AzureSpringBootRequestHandler<User, Greeting> 
                 .filter((u -> u.getName() != null))
                 .orElseGet(() -> new User(
                         request.getQueryParameters()
-                                .getOrDefault("name", "<no name supplied> please provide a name as " +
-                                        "either a query string parameter or in a POST body")));
+                                .getOrDefault("name", "world")));
         context.getLogger().info("Greeting user name: " + user.getName());
         return request
                 .createResponseBuilder(HttpStatus.OK)

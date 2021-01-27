@@ -31,7 +31,7 @@
 
         <functionAppRegion>westeurope</functionAppRegion>
         <stagingDirectory>${project.build.directory}/azure-functions/${functionAppName}</stagingDirectory>
-        <start-class>com.example.HelloFunction</start-class>
+        <start-class>com.example.DemoApplication</start-class>
         <spring.boot.wrapper.version>1.0.26.RELEASE</spring.boot.wrapper.version>
     </properties>
 
@@ -42,7 +42,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-function-web</artifactId>
+            <artifactId>spring-cloud-starter-function-webflux</artifactId>
             <scope>provided</scope>
         </dependency>
 

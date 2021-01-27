@@ -11,8 +11,8 @@ public class HelloFunctionTest {
 
     @Test
     public void test() {
-        Greeting result = new HelloFunction().hello().apply(new User("foo"));
-        assertThat(result.getMessage()).isEqualTo("Welcome, foo");
+        Greeting result = new HelloFunction().apply(new User("foo"));
+        assertThat(result.getMessage()).isEqualTo("Hello, foo!\n");
     }
 
     @Test
@@ -21,6 +21,6 @@ public class HelloFunctionTest {
                 HelloFunction.class);
         Greeting result = handler.handleRequest(new User("foo"), null);
         handler.close();
-        assertThat(result.getMessage()).isEqualTo("Welcome, foo");
+        assertThat(result.getMessage()).isEqualTo("Hello, foo!\n");
     }
 }

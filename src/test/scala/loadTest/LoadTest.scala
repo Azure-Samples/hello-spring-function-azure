@@ -15,7 +15,7 @@ class LoadTest extends Simulation {
 
   val scn = scenario("Hello function load test") // A scenario is a chain of requests and pauses
     .exec(http("hello")
-      .get("/api/hello?name=test")
+      .get("/api/hello")
       .check(status.is("200")))
 
   setUp(scn.inject(rampUsers(1000).during(1.seconds)).protocols(httpProtocol))
