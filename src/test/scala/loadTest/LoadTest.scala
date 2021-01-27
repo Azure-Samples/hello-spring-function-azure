@@ -18,5 +18,5 @@ class LoadTest extends Simulation {
       .get("/api/hello")
       .check(status.is("200")))
 
-  setUp(scn.inject(rampUsers(1000).during(1.seconds)).protocols(httpProtocol))
+  setUp(scn.inject(rampUsers(1000).during(10.seconds)).protocols(httpProtocol))
 }
