@@ -49,7 +49,7 @@ Deploy the application on Azure Functions with the Azure Function Maven plug-in:
 You can then test the running application, by running a POST request:
 
 ```
-curl https://<YOUR_SPRING_FUNCTION_NAME>.azurewebsites.net/api/hello -d "{\"name\":\"Azure\"}"
+curl https://<YOUR_SPRING_FUNCTION_NAME>.azurewebsites.net/api/hello -d '{"name": "Azure"}'
 ```
 
 Or a GET request:
