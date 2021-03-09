@@ -38,7 +38,7 @@ Once the application is built, you can run it locally using the Azure Function M
 
 And you can test it using a cURL command:
 
-`curl http://localhost:7071/api/hello -d "{\"name\":\"Azure\"}"`
+`curl http://localhost:7071/api/hello -d '{"name": "Azure"}'
 
 ## Deploying to Azure Functions
 
