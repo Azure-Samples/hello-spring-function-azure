@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DemoApplication {
 
-	public static void main(String[] args) throws Exception {
-		SpringApplication.run(HelloFunction.class, args);
-	}
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(HelloFunction.class, args);
+    }
 }
