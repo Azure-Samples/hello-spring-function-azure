@@ -13,8 +13,8 @@ public class HelloFunctionTest {
 
     @Test
     public void test() {
-        Flux<Greeting> result = new HelloFunction().apply(Flux.just(new User("foo")));
-        assertThat(result.blockFirst().getMessage()).isEqualTo("Hello, foo!\n");
+        Mono<Greeting> result = new HelloFunction().apply(Mono.just(new User("foo")));
+        assertThat(result.block().getMessage()).isEqualTo("Hello, foo!\n");
     }
 
     @Test

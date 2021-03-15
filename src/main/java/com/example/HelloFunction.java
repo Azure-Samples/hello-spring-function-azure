@@ -9,9 +9,9 @@ import reactor.core.publisher.Mono;
 import java.util.function.Function;
 
 @Component
-public class HelloFunction implements Function<Flux<User>, Flux<Greeting>> {
+public class HelloFunction implements Function<Mono<User>, Mono<Greeting>> {
 
-    public Flux<Greeting> apply(Flux<User> flux) {
-        return flux.map(user -> new Greeting("Hello, " + user.getName() + "!\n"));
+    public Mono<Greeting> apply(Mono<User> mono) {
+        return mono.map(user -> new Greeting("Hello, " + user.getName() + "!\n"));
     }
 }
