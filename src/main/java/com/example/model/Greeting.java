@@ -2,14 +2,14 @@ package com.example.model;
 
 public class Greeting {
 
+    private String message;
+
     public Greeting() {
     }
 
     public Greeting(String message) {
         this.message = message;
     }
-
-    private String message;
 
     public String getMessage() {
         return message;
