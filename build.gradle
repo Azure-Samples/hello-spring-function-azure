@@ -1,7 +1,7 @@
 
 plugins {
     id 'java'
-    id "com.microsoft.azure.azurefunctions" version "1.0.0"
+    id "com.microsoft.azure.azurefunctions" version "1.5.1"
 }
 
 repositories {
@@ -25,9 +25,9 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.cloud:spring-cloud-function-adapter-azure:3.0.3.RELEASE'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.2.5.RELEASE'
-    compileOnly 'org.springframework.cloud:spring-cloud-starter-function-web:3.0.3.RELEASE'
+    implementation 'org.springframework.cloud:spring-cloud-function-adapter-azure:3.1.2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.4.4'
+    compileOnly 'org.springframework.cloud:spring-cloud-starter-function-web:3.1.2'
 }
 
 group = 'com.example'
@@ -50,7 +50,7 @@ azurefunctions {
     appName = 'my-spring-function'
     appSettings {
         WEBSITE_RUN_FROM_PACKAGE = '1'
-        FUNCTIONS_EXTENSION_VERSION = '~2'
+        FUNCTIONS_EXTENSION_VERSION = '~3'
         FUNCTIONS_WORKER_RUNTIME = 'java'
         MAIN_CLASS = 'com.example.HelloFunction'
     }
