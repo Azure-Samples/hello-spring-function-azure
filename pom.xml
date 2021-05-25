@@ -13,7 +13,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.5</version>
+        <version>2.5.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -32,7 +32,6 @@
         <functionAppRegion>westeurope</functionAppRegion>
         <stagingDirectory>${project.build.directory}/azure-functions/${functionAppName}</stagingDirectory>
         <start-class>com.example.DemoApplication</start-class>
-        <spring.boot.wrapper.version>1.0.26.RELEASE</spring.boot.wrapper.version>
     </properties>
 
     <dependencies>
@@ -209,13 +208,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.springframework.boot.experimental</groupId>
-                        <artifactId>spring-boot-thin-layout</artifactId>
-                        <version>${spring.boot.wrapper.version}</version>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
     </build>
