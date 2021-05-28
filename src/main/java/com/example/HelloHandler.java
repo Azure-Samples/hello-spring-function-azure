@@ -6,11 +6,11 @@ import com.microsoft.azure.functions.*;
 import com.microsoft.azure.functions.annotation.AuthorizationLevel;
 import com.microsoft.azure.functions.annotation.FunctionName;
 import com.microsoft.azure.functions.annotation.HttpTrigger;
-import org.springframework.cloud.function.adapter.azure.AzureSpringBootRequestHandler;
+import org.springframework.cloud.function.adapter.azure.FunctionInvoker;
 
 import java.util.Optional;
 
-public class HelloHandler extends AzureSpringBootRequestHandler<User, Greeting> {
+public class HelloHandler extends FunctionInvoker<User, Greeting> {
 
     @FunctionName("hello")
     public HttpResponseMessage execute(
