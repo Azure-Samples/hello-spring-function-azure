@@ -59,7 +59,7 @@
         <dependency>
             <groupId>io.gatling.highcharts</groupId>
             <artifactId>gatling-charts-highcharts</artifactId>
-            <version>3.5.0</version>
+            <version>3.7.6</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -106,7 +106,12 @@
                 <plugin>
                     <groupId>io.gatling</groupId>
                     <artifactId>gatling-maven-plugin</artifactId>
-                    <version>3.1.1</version>
+                    <version>4.1.5</version>
+                    <configuration>
+                        <includes>
+                            <include>com.example.loadtest.*</include>
+                        </includes>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -127,7 +132,7 @@
                         <!-- Run Azure Function from package file by default -->
                         <property>
                             <name>FUNCTIONS_EXTENSION_VERSION</name>
-                            <value>~3</value>
+                            <value>~4</value>
                         </property>
                         <property>
                             <name>FUNCTIONS_WORKER_RUNTIME</name>
