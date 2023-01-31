@@ -26,10 +26,11 @@
         <azure.functions.java.library.version>3.0.0</azure.functions.java.library.version>
         <spring.cloud.function.dependencies>4.0.0</spring.cloud.function.dependencies>
 
-        <!-- customize those five properties. The functionAppName should be unique across Azure -->
-        <functionResourceGroup>my-spring-function-resource-group</functionResourceGroup>
+        <!-- customize those three properties. The functionAppName should be unique across Azure -->
+        <functionResourceGroup>my-spring-function-tzolov1-resource-group</functionResourceGroup>
         <functionAppServicePlanName>my-spring-function-service-plan</functionAppServicePlanName>
-        <functionAppName>my-spring-function</functionAppName>
+        <functionAppName>my-spring-function-tzolov1</functionAppName>
+
         <functionAppRegion>westeurope</functionAppRegion>
         <functionPricingTier>Y1</functionPricingTier>
 
@@ -45,6 +46,10 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-function-webflux</artifactId>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-function-web</artifactId>
         </dependency>
 
         <!-- Test -->
