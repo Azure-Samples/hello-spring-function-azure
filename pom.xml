@@ -26,7 +26,7 @@
         <azure.functions.java.library.version>3.0.0</azure.functions.java.library.version>
         <spring.cloud.function.dependencies>4.0.0</spring.cloud.function.dependencies>
 
-        <!-- customize those three properties. The functionAppName should be unique across Azure -->
+        <!-- customize those five properties. The functionAppName should be unique across Azure -->
         <functionResourceGroup>my-spring-function-resource-group</functionResourceGroup>
         <functionAppServicePlanName>my-spring-function-service-plan</functionAppServicePlanName>
         <functionAppName>my-spring-function</functionAppName>
