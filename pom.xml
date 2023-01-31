@@ -31,7 +31,7 @@
         <functionAppServicePlanName>my-spring-function-service-plan</functionAppServicePlanName>
         <functionAppName>my-spring-function</functionAppName>
         <functionAppRegion>westeurope</functionAppRegion>
-        <functionPricingTier>EP1</functionPricingTier>
+        <functionPricingTier>Y1</functionPricingTier>
 
         <start-class>com.example.DemoApplication</start-class>
     </properties>
