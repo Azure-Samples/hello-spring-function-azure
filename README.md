@@ -27,7 +27,7 @@ This project uses the Maven Wrapper, so all you need is Java installed.
 - Clone the project: `git clone https://github.com/Azure-Samples/hello-spring-function-azure.git`
 - Configure the project to use your own resource group and your own application name (it should be unique across Azure)
   - Open the `pom.xml` file
-  - Customize the `resourceGroup` and `appName` properties
+  - Customize the `functionResourceGroup` and `functionAppName` properties
 - Build the project: `./mvnw clean package`
 
 ### Quickstart
